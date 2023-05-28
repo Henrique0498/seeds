@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef } from "react";
+import { Fragment, useRef } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
@@ -8,7 +8,7 @@ import { Icon } from "components/atoms/Icon";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 import { InterfaceSidebarRef } from "../Sidebar/types";
-import Sidebar from "../Sidebar";
+import { Sidebar } from "../Sidebar";
 
 const products = [
   {

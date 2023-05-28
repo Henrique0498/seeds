@@ -22,7 +22,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default forwardRef<InterfaceSidebarRef>((_, ref) => {
+export const Sidebar = forwardRef<InterfaceSidebarRef>((props, ref) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useImperativeHandle(ref, () => {
@@ -40,7 +40,7 @@ export default forwardRef<InterfaceSidebarRef>((_, ref) => {
       onClose={setMobileMenuOpen}
     >
       <div className="fixed inset-0 z-10" />
-      <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white p-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div className="flex items-center justify-between">
           <Link to="/" className="p-1.5 flex items-center text-emerald-600">
             <Icon icon="logo" className="h-8 w-auto" />
