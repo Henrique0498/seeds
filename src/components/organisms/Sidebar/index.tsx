@@ -22,7 +22,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export const Sidebar = forwardRef<InterfaceSidebarRef>((props, ref) => {
+export const Sidebar = forwardRef<InterfaceSidebarRef>((_, ref) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useImperativeHandle(ref, () => {
