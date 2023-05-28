@@ -7,4 +7,4 @@ export interface InterfaceIcon extends HtmlHTMLAttributes<SVGSVGElement> {
   icon: TypeIconsName;
 }
 
-export interface InterfaceIconFile extends HtmlHTMLAttributes<SVGSVGElement> {}
+export type InterfaceIconFile = HtmlHTMLAttributes<SVGSVGElement>;
