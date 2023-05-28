@@ -1,4 +1,4 @@
-import { Fragment, useRef } from "react";
+import { Fragment, useEffect, useRef } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
@@ -26,7 +26,7 @@ export function Header() {
 
   return (
     <>
-      <header className={styles.container}>
+      <header className={`${styles.container} max-w-7xl`}>
         <nav className="flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1 text-emerald-600">
             <Link to="/" className="p-1.5 flex items-center">
