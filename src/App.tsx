@@ -4,8 +4,6 @@ import { Homepage } from "components/Page/Homepage";
 import { Footer } from "components/organisms/Footer";
 import { Header } from "components/organisms/Header";
 
-import styles from "styles/App.module.css";
-
 function App() {
   return (
     <div className={`text-gray-900`}>
