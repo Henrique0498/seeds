@@ -26,8 +26,11 @@ export function Header() {
 
   return (
     <>
-      <header className={`${styles.container} max-w-7xl`}>
-        <nav className="flex items-center justify-between" aria-label="Global">
+      <header className={`${styles.container} p-4`}>
+        <nav
+          className="flex items-center justify-between mx-auto max-w-7xl"
+          aria-label="Global"
+        >
           <div className="flex lg:flex-1 text-emerald-600">
             <Link to="/" className="p-1.5 flex items-center">
               <Icon icon="logo" className="h-8 w-auto" />
