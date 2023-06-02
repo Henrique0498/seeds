@@ -9,13 +9,14 @@
   background-position-x: 100%;
   background-position-y: calc(100% + 1px);
   background-repeat: no-repeat;
-  height: 50rem;
+  min-height: 50rem;
 }
 
 .presentation {
   min-height: 24rem;
   width: fit-content;
   background-image: url("/images/heart-plants.svg");
+  background-size: auto, 100%;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -27,11 +28,75 @@
 .presentationTitle {
   font-family: "Pacifico", cursive;
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .presentationSubtitle {
   font-weight: 500;
   color: #374151;
+}
+
+.cardInvite {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  grid-template-areas:
+    "header"
+    "body";
+}
+
+.cardInvite_background {
+  grid-area: photo;
+  margin-left: auto;
+  display: none;
+  position: relative;
+  border-radius: 50%;
+}
+
+.background_main {
+  height: 25rem;
+  width: 25rem;
+  background-image: url("/images/tree-hand-left.png");
+  background-repeat: no-repeat;
+  background-position: bottom, right;
+  position: absolute;
+}
+
+.cardInvite_header {
+  grid-area: header;
+  font-family: "Pacifico", cursive;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.cardInvite_body {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  max-width: 30rem;
+  gap: 1rem;
+}
+
+.background_circle {
+  height: 12.5rem;
+  width: 12.5rem;
+  background-image: url("/images/tree-hand-right.png");
+  background-repeat: no-repeat;
+  background-position: bottom, right;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.available {
+  height: 20rem;
+  background-image: url("/images/background-home-available-left.svg");
+  background-size: auto calc(100% + 2px);
+  background-position-y: -1px;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 1024px) {
@@ -40,5 +105,65 @@
       url("/images/background-home-presentation-right.svg");
     background-position-x: 0px, 100%;
     background-position-y: calc(100% + 1px), calc(100% + 1px);
+  }
+
+  .presentation {
+    background-size: auto;
+  }
+
+  .cardInvite {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 1rem;
+    grid-template-areas:
+      "photo header"
+      "photo body";
+  }
+
+  .cardInvite_background {
+    height: 12.5rem;
+    width: 12.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-image: linear-gradient(90deg, #bfdbfe 0%, #93c5fd 100%);
+  }
+
+  .background_main {
+    height: 25rem;
+    width: 25rem;
+    background-image: url("/images/tree-hand-left.png");
+    background-repeat: no-repeat;
+    background-position: bottom, right;
+    position: absolute;
+  }
+
+  .cardInvite_header {
+    grid-area: header;
+    font-family: "Pacifico", cursive;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .cardInvite_body {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    max-width: 30rem;
+  }
+
+  .background_circle {
+    height: 12.5rem;
+    width: 12.5rem;
+    background-image: url("/images/tree-hand-right.png");
+    background-repeat: no-repeat;
+    background-position: bottom, right;
+    border-radius: 50%;
+    position: absolute;
   }
 }
