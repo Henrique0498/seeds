@@ -26,7 +26,7 @@ export function Header() {
 
   return (
     <>
-      <header className={`${styles.container} p-4`}>
+      <header className={`${styles.container} p-4 bg-white shadow-sm`}>
         <nav
           className="flex items-center justify-between mx-auto max-w-7xl"
           aria-label="Global"
