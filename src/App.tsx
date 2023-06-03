@@ -1,17 +1,9 @@
-import { BrowserRouter } from "react-router-dom";
-
-import { Homepage } from "components/Page/Homepage";
-import { Footer } from "components/organisms/Footer";
-import { Header } from "components/organisms/Header";
+import { AppRoutes } from "routes";
 
 function App() {
   return (
     <div className={`text-gray-900`}>
-      <BrowserRouter>
-        <Header />
-        <Homepage />
-        <Footer />
-      </BrowserRouter>
+      <AppRoutes />
     </div>
   );
 }
