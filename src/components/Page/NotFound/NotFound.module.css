@@ -1,0 +1,21 @@
+.container {
+  min-height: 100vh;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  background-image: url("/images/background-notFound.svg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position-y: calc(100% + 1px);
+}
+
+.title {
+  font-family: "Pacifico", cursive;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: #047857;
+  text-align: center;
+}

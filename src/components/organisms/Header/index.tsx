@@ -12,7 +12,7 @@ import { Sidebar } from "../Sidebar";
 
 const agriculture = [
   {
-    name: "Agricultura sustentável,",
+    name: "Agricultura sustentável",
     href: "/agriculture/sustainability",
   },
   {
@@ -80,23 +80,16 @@ export function Header() {
                 <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-gray-900/5">
                   <div className="p-2">
                     {agriculture.map((item) => (
-                      <div
+                      <NavLink
                         key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-100"
+                        to={item.href}
+                        className={({ isActive }) =>
+                          `font-semibold group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-100
+                               ${isActive ? "text-emerald-600" : ""}`
+                        }
                       >
-                        <div className="flex-auto">
-                          <NavLink
-                            to={item.href}
-                            className={({ isActive }) =>
-                              `text-sm font-semibold leading-6 ${
-                                isActive ? "text-emerald-600" : ""
-                              }`
-                            }
-                          >
-                            {item.name}
-                          </NavLink>
-                        </div>
-                      </div>
+                        {item.name}
+                      </NavLink>
                     ))}
                   </div>
                 </Popover.Panel>
