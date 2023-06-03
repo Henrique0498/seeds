@@ -6,18 +6,18 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Icon } from "components/atoms/Icon";
 
 import styles from "./Header.module.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { InterfaceSidebarRef } from "../Sidebar/types";
 import { Sidebar } from "../Sidebar";
 
-const products = [
+const agriculture = [
   {
     name: "Agricultura sustentável,",
-    href: "#",
+    href: "/agriculture/sustainability",
   },
   {
     name: "Cultivo eficientes",
-    href: "#",
+    href: "/agriculture/efficiency",
   },
 ];
 
@@ -48,9 +48,17 @@ export function Header() {
             </button>
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
-            <a href="#" className="text-sm font-semibold leading-6">
+            <NavLink
+              to="/IAGs"
+              className={({ isActive }) =>
+                `text-sm font-semibold leading-6 ${
+                  isActive ? "text-emerald-600" : ""
+                }`
+              }
+            >
               IAGs
-            </a>
+            </NavLink>
+
             <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6">
                 Agropecuária
@@ -71,16 +79,22 @@ export function Header() {
               >
                 <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-gray-900/5">
                   <div className="p-2">
-                    {products.map((item) => (
+                    {agriculture.map((item) => (
                       <div
                         key={item.name}
                         className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-100"
                       >
                         <div className="flex-auto">
-                          <a href={item.href} className="block font-semibold">
+                          <NavLink
+                            to={item.href}
+                            className={({ isActive }) =>
+                              `text-sm font-semibold leading-6 ${
+                                isActive ? "text-emerald-600" : ""
+                              }`
+                            }
+                          >
                             {item.name}
-                            <span className="absolute inset-0" />
-                          </a>
+                          </NavLink>
                         </div>
                       </div>
                     ))}
@@ -88,9 +102,17 @@ export function Header() {
                 </Popover.Panel>
               </Transition>
             </Popover>
-            <a href="#" className="text-sm font-semibold leading-6">
+
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `text-sm font-semibold leading-6 ${
+                  isActive ? "text-emerald-600" : ""
+                }`
+              }
+            >
               Contato
-            </a>
+            </NavLink>
           </Popover.Group>
         </nav>
       </header>
