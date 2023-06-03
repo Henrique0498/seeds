@@ -1,0 +1,14 @@
+.division {
+  background-image: url("/images/background-footer-division.svg");
+  width: 100%;
+  height: 5rem;
+  background-position: 0px calc(100% + 1px);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
