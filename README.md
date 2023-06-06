@@ -11,4 +11,7 @@ npm install
 ## Comandos
 - `dev`: inicia aplicação no [localhost:3000](http://localhost:3000);
 
-[versão publicada](seeds-omega.vercel.app)
+
+## Versão publicada
+
+[Acessar](seeds-omega.vercel.app)
