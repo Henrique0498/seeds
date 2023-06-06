@@ -195,3 +195,18 @@ export function Contact() {
                 </div>
               </div>
             </div>
+
+            <div className="mt-6 flex items-center justify-end gap-x-6">
+              <button
+                type="submit"
+                className="rounded-md bg-emerald-600 px-8 py-4 text-md uppercase font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  );
+}
