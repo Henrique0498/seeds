@@ -8,3 +8,7 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
 }
+
+* {
+  outline-color: transparent;
+}
