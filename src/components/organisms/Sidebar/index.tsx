@@ -1,20 +1,20 @@
 import { Dialog, Disclosure } from "@headlessui/react";
 import { ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { forwardRef, useImperativeHandle, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { InterfaceSidebarRef } from "./types";
 
 import styles from "./Sidebar.module.css";
 import { Icon } from "components/atoms/Icon";
 
-const products = [
+const agriculture = [
   {
-    name: "Agricultura sustentável,",
-    href: "#",
+    name: "Agricultura sustentável",
+    href: "/agriculture/sustainability",
   },
   {
     name: "Cultivo eficientes",
-    href: "#",
+    href: "/agriculture/efficiency",
   },
 ];
 
@@ -58,13 +58,18 @@ export const Sidebar = forwardRef<InterfaceSidebarRef>((_, ref) => {
         <div className="mt-6 flow-root">
           <div className="-my-6 divide-y divide-gray-500/10">
             <div className="space-y-2 py-6">
-              <a
-                href="#"
-                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
+              <NavLink
+                to="/IAGs"
+                className={({ isActive }) =>
+                  `text-base font-semibold leading-6 ${
+                    isActive ? "text-emerald-600" : ""
+                  }`
+                }
               >
                 IAGs
-              </a>
-              <Disclosure as="div" className="-mx-3">
+              </NavLink>
+
+              <Disclosure as="div" className="-mx-3 py-6">
                 {({ open }) => (
                   <>
                     <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
@@ -78,26 +83,35 @@ export const Sidebar = forwardRef<InterfaceSidebarRef>((_, ref) => {
                       />
                     </Disclosure.Button>
                     <Disclosure.Panel className="mt-2 space-y-2">
-                      {products.map((item) => (
-                        <Disclosure.Button
-                          key={item.name}
-                          as="a"
-                          href={item.href}
-                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50"
-                        >
-                          {item.name}
-                        </Disclosure.Button>
-                      ))}
+                      <div>
+                        {agriculture.map((item) => (
+                          <NavLink
+                            key={item.name}
+                            to={item.href}
+                            className={({ isActive }) =>
+                              `font-semibold group relative flex items-center gap-x-6 rounded-lg p-4 text-base leading-6 hover:bg-gray-100
+                               ${isActive ? "text-emerald-600" : ""}`
+                            }
+                          >
+                            {item.name}
+                          </NavLink>
+                        ))}
+                      </div>
                     </Disclosure.Panel>
                   </>
                 )}
               </Disclosure>
-              <a
-                href="#"
-                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
+
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `font-semibold leading-6 text-base ${
+                    isActive ? "text-emerald-600" : ""
+                  }`
+                }
               >
                 Contato
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
