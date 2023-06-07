@@ -7,39 +7,44 @@ import { Icon } from "components/atoms/Icon";
 const users = [
   {
     id: "henrique0498",
-    photo:
-      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    photo: "https://avatars.githubusercontent.com/u/39716479?v=4",
     name: "Henrique Lopes",
     rm: "550279",
-    github: "",
-    linkedIn: "",
+    github: "https://github.com/Henrique0498",
+    linkedIn: "https://www.linkedin.com/in/henrique-ls/",
   },
   {
-    id: "432432432",
-    photo:
-      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-    name: "Henrique Lopes",
-    rm: "550279",
-    github: "",
-    linkedIn: "",
+    id: "nataliascigliano",
+    photo: "https://avatars.githubusercontent.com/u/125839232?v=4",
+    name: "Natalia Scigliano",
+    rm: "98430",
+    github: "https://github.com/nataliascigliano",
+    linkedIn: "https://www.linkedin.com/in/natalia-scigliano/",
   },
   {
-    id: "3452432423",
-    photo:
-      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-    name: "Henrique Lopes",
-    rm: "550279",
-    github: "",
-    linkedIn: "",
+    id: "caiorr1",
+    photo: "https://avatars.githubusercontent.com/u/126923467?v=4",
+    name: "Caio Ribeiro Rodrigues",
+    rm: "99759",
+    github: "https://github.com/caiorr1",
+    linkedIn: "https://www.linkedin.com/in/caio-ribeiro-rodrigues-720420184/",
   },
   {
-    id: "432432434",
-    photo:
-      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-    name: "Henrique Lopes",
-    rm: "550279",
-    github: "",
-    linkedIn: "",
+    id: "EduardoJablinski",
+    photo: "https://avatars.githubusercontent.com/u/127799391?v=4",
+    name: "Eduardo Jablinski",
+    rm: "550975",
+    github: "https://github.com/EduardoJablinski",
+    linkedIn: "https://www.linkedin.com/in/eduardo-j-131572207/",
+  },
+
+  {
+    id: "FelipeSieiro",
+    photo: "https://avatars.githubusercontent.com/u/125573345?v=4",
+    name: "Felipe Sieiro",
+    rm: "98249",
+    github: "https://github.com/FelipeSieiro",
+    linkedIn: "https://www.linkedin.com/in/felipesieiro/",
   },
 ];
 
@@ -81,6 +86,7 @@ export function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                         title="Github"
+                        className="hover:text-emerald-500"
                       >
                         <FiGithub size={20} />
                       </a>
@@ -89,6 +95,7 @@ export function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                         title="LinkedIn"
+                        className="hover:text-emerald-500"
                       >
                         <FaLinkedinIn size={20} />
                       </a>
