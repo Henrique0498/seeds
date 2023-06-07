@@ -1,4 +1,53 @@
 .container {
-  min-height: 100vh;
   margin-top: 5rem;
+  color: #022c22;
+}
+
+.presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30rem;
+  background-image: url("/images/background-agriculture-presentation-top.svg"),
+    url("/images/background-agriculture-presentation-bottom.svg");
+  background-position-x: 0px, calc(100% + 1px);
+  background-position-y: 0px, calc(100% + 1px);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #10b981;
+  padding: 1rem;
+}
+
+.presentationTitle {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.title {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about {
+  height: 20rem;
+  padding: 1rem;
+}
+
+.titleList {
+  writing-mode: vertical-rl;
+}
+
+@media (min-width: 1024px) {
+  .presentation {
+    background-size: 40% auto;
+  }
+
+  .about {
+    background-image: url("/images/background-agriculture-about-top.svg");
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+  }
 }
